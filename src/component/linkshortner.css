@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    outline: 0;
+    border: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.link{
+    border-radius: 5px;
+    margin-inline: 20px;
+    width: 750px;
+    /* z-index: 3; */
+}
+.link .link_head{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.link_long{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+/* line */
+.shortener{
+    color: #f99f38;
+    text-transform: capitalize;
+}
+.link_input{
+    width: 80%;
+    padding: 15px 10px ;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px 0 0 10px;
+}
+.link_button{
+    width: 20%;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f99f38;
+    cursor: pointer;
+    transition: .5s;
+} 
+.convert_icon{
+    color: #333;
+    font-size: 30px;
+}
+/* ------------------------------- */
+.link_shortened{
+    padding: 20px;
+    /* display: none; */
+}
+.link_shortened_head{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+}
+.link_shortened_content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.link_shorten_text{
+    background: rgb(255, 255, 255);
+    width: 70%;
+    padding: 15px 10px;
+    border-radius: 10px 0 0 10px;
+    font-size: 18px;
+    color: #757575;
+}
+
+
+.link_shortened_content button{
+    width: 20%;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f99f38;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+.link_shortened_content button.copied{
+    background-color: #01a553;
+    color: #222;
+}
+.clone_icon{
+    color: #333;
+    font-size: 20px;
+    transition: .5s;
+}
+.link_shortened_content button:hover,.link_button:hover{
+    background: #ca7719;
+}
+.link_shortened_content button.copied:hover{
+    background-color: #017239;
+}
+.link_shortened_content button.copied:hover .clone_icon{
+    color: #fff;
+}
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+.noData{
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #4e54c8;
+    overflow: hidden;
+    z-index: -1;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 30s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 76%;
+    width: 82px;
+    height: 82px;
+    bottom: -82px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 18%;
+    width: 194px;
+    height: 194px;
+    bottom: -194px;
+    animation-delay: 4s;
+}
+.background li:nth-child(2) {
+    left: 48%;
+    width: 78px;
+    height: 78px;
+    bottom: -78px;
+    animation-delay: 6s;
+}
+.background li:nth-child(3) {
+    left: 48%;
+    width: 135px;
+    height: 135px;
+    bottom: -135px;
+    animation-delay: 14s;
+}
+.background li:nth-child(4) {
+    left: 8%;
+    width: 73px;
+    height: 73px;
+    bottom: -73px;
+    animation-delay: 15s;
+}
+.background li:nth-child(5) {
+    left: 34%;
+    width: 120px;
+    height: 120px;
+    bottom: -120px;
+    animation-delay: 15s;
+}
+.background li:nth-child(6) {
+    left: 36%;
+    width: 77px;
+    height: 77px;
+    bottom: -77px;
+    animation-delay: 18s;
+}
+.background li:nth-child(7) {
+    left: 79%;
+    width: 92px;
+    height: 92px;
+    bottom: -92px;
+    animation-delay: 30s;
+}
+.background li:nth-child(8) {
+    left: 31%;
+    width: 140px;
+    height: 140px;
+    bottom: -140px;
+    animation-delay: 28s;
+}
+.background li:nth-child(9) {
+    left: 3%;
+    width: 107px;
+    height: 107px;
+    bottom: -107px;
+    animation-delay: 16s;
+}
+.background li:nth-child(10) {
+    left: 28%;
+    width: 100px;
+    height: 100px;
+    bottom: -100px;
+    animation-delay: 48s;
+}
+.background li:nth-child(11) {
+    left: 1%;
+    width: 150px;
+    height: 150px;
+    bottom: -150px;
+    animation-delay: 3s;
+}
+.background li:nth-child(12) {
+    left: 45%;
+    width: 98px;
+    height: 98px;
+    bottom: -98px;
+    animation-delay: 38s;
+}
+.background li:nth-child(13) {
+    left: 53%;
+    width: 129px;
+    height: 129px;
+    bottom: -129px;
+    animation-delay: 57s;
+}
+
+@media screen and (max-width : 991px) {
+    .link{
+        width: 700px;
+    }
+}
+@media screen and (max-width : 767px) {
+    .link{
+        width: 550px;
+    }
+    .link_input{
+        width: 80%;
+        margin-bottom: 5px;
+        border-radius: 10px ;
+        padding-block: 10px;
+    }
+    .link_button{
+        width: 60%;
+        border-radius: 10px;
+        padding-block: 5px;
+    } 
+    .link_shorten_text{
+        width: 80%;
+        margin-bottom: 5px;
+        border-radius: 10px ;
+        padding-block: 10px;
+    }
+    .link_shortened_content button{
+        width: 60%;
+        border-radius:10px;
+        padding-block: 10px;
+    }
+    
+}
+
+@media screen and (max-width : 600px) {
+    .link{
+        width: 400px;
+    }
+    .link_input{
+        width: 70%;
+    }
+    .link_button{
+        width: 40%;
+
+    } 
+    .link_shorten_text{
+        width: 70%;
+    }
+    .link_shortened_content button{
+        width: 40%;
+    }
+    
+}
